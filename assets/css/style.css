@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Press+Start+2P&family=Wendy+One&family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+} /* Includes padding and border in an element's height and width*/
+ 
+ 
+/*----- Navbar Menu -------*/
+
+.navbar {
+  font-family: 'Bungee Inline';
+  font-size: 300%;
+  color: yellow;
+  background-color: black;
+  display: block;
+  width: 100%;
+}
+
+.nav-link p {
+  font-family: 'Wendy One', sans-serif;
+  font-size: 200%;
+  color: aqua;
+}
+
+.nav-item {
+  color: aqua;
+  margin: 1% 5% 1% 5%;
+}
+
+.mobile-nav {
+  font-size: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+#logo-mobile {
+  font-family: 'Bungee Inline';
+  font-size: 60%;
+  color: yellow;
+}
+
+.mobile-nav i {
+  font-size: 200%;
+  color: aqua;
+}
+
+#mobile-nav {
+  display: none;
+}
+
+/*-------- Global ---------*/
+
+body {
+  background-color: black;
+  margin: 0;
+}
+
+/*------ Start Game Form -----*/
+
+#playerPanel {
+  display: block;
+  position: fixed;
+  padding: 5%;
+  text-align: center;
+  justify-content: center;
+  z-index: 1100; /* This specifies the stack order to ensure #playerPanel is displayed in front of the rest of the elements on screen */
+  background-color: black;
+  font-family: 'Bungee Inline';
+  font-size:350%;
+  color: yellow;
+}
+
+#currentScorePanel {
+    display: hidden;
+    font-family: 'Press Start 2P';
+    color: pink;
+    font-size: 80%;
+    padding: 1% 0 1% 0;
+}
+
+#playerName {
+    width: 30%;
+    margin-bottom: 2%;
+}
+
+#playerForm {
+    margin-bottom: 1%;
+}
+
+#playerForm label {
+    width: 100%;
+}
+ 
+.enter-name {
+    color: aqua;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 70%;
+    margin-bottom: 2%;
+}
+
+/* This glow animation is from this tutorial: https://www.w3docs.com/snippets/css/how-to-create-flashing-glowing-button-using-animation-in-css3.html */
+@keyframes glowing {
+        0% {
+          background-color: #2ba805;
+          box-shadow: 0 0 5px #2ba805;
+        }
+        50% {
+          background-color: #49e819;
+          box-shadow: 0 0 20px #49e819;
+        }
+        100% {
+          background-color: #2ba805;
+          box-shadow: 0 0 5px #2ba805;
+        }
+      }
+
+#submit {
+        animation: glowing 1300ms infinite;
+      }
+
+/*-------------- Gameboard -----------------*/
+
+.game-info {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  margin: 10%;
+  justify-content: center;
+  perspective: 500px;
+}
+
+.time-turns {
+  font-family: 'Press Start 2P';
+  color: pink;
+}
+
+/*-------------- Cards -----------------*/
+
+.card {
+  position: relative;
+  display: flex;
+  max-width: 100%; 
+  max-height: 100%;
+  transition: transform 300ms ease-in-out;
+}
+
+/* transform specifies the degrees for turning the cards*/
+.card-back {
+  transform: rotateY(0);
+}
+
+.card-picture {
+  transform: rotateY(-180deg);
+}
+
+.card.visible .card-back {
+  transform: rotateY(180deg);
+}
+
+.card.visible .card-picture {
+  transform: rotateY(0);
+}
+
+.card-picture {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+.card-img,
+.card-back {
+  max-width: 100px; 
+  max-height: 100px;
+}
+
+/*-------------- About Section -----------------*/
+
+#about {
+    display: block;
+    width: 100%;
+    text-align: center; 
+    padding: 10%;
+}
+
+.about-text {
+    color: white;
+    font-size: 130%;
+    font-family: 'Lato', sans-serif;  
+    padding: 2%;
+    margin: 0;
+}
+
+h1 {
+    color: purple;
+    font-family: 'Wendy One', sans-serif;
+    margin: 2px;
+}
+
+/*-------------- Subscribe to Newsletter -----------------*/
+
+#subscribe {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 5%;
+    margin: 0 0 5% 0;
+    font-family: 'Lato', sans-serif;  
+    color: white;
+    font-size: 120%;
+}
+
+#email-text {
+    padding: 5%;
+    font-size: 120%;
+}
+
+#email-subscribe {
+     font-family: 'Bungee Inline';
+     margin: 2%;
+}
+
+#enter-email {
+    padding: 10%;
+    color: aqua;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 70%;
+}
+
+/*-------------- Player and Scores Table -----------------*/
+
+#scores {
+    color: yellow;
+    border: 2px solid yellow;
+    width: 80%;
+    display: inline-block;
+    font-size: 35%;
+    margin-bottom: 12%;
+}
+
+#scores table {
+  width: 100%;
+  text-align: center;
+}
+
+#scores table th, td {
+  text-align: center;
+}
+
+#scores table tr.last-game {
+  color: white;
+  border: 2px solid yellow;
+}
+
+/*-------------- Footer -------------*/
+
+footer {
+  height: 70px;
+  width: 100%;
+  margin: 0;
+  padding: 1%;
+  background-color: black;
+  position: fixed;
+  align-content: center;
+  bottom: 0;
+  left: 0;
+}
+
+.social-links {
+  text-align: center;
+}
+
+.social-links li {
+  display: inline;
+}
+
+.social-links i {
+  font-size: 180%;
+  margin: 0;
+  padding: 0.5%;
+  color: white;
+}
+
+/*--------------- Media Queries --------------*/
+
+@media only screen and (max-width:950px) {
+
+/* MQ - NAV MENU */
+#desktop-nav {
+    display: none;
+}
+
+#mobile-nav {
+    display: block;
+    max-height: 50px;
+    padding: 0;
+}
+
+.nav-item {
+    font-size: 100%;
+}
+
+/* MQ - START GAME FORM */
+
+#playerPanel {
+  display: block;
+  position: fixed;
+  width: 100%;
+  padding: 50% 2% 0 0;
+  font-size: 100%;
+  height: 100%;
+}
+
+/* MQ - SCOREBOARD */
+
+#scores {
+    width: 95%;
+    font-size: 70%;
+    padding: 0;
+}
+
+/* MQ - SUBSCRIBE SECTION */
+
+#subscribe {
+    margin-bottom: 70px;
+    padding: 6%;
+    border: none;
+}
+
+#enter-email {
+    padding: 5%;
+}
+
+#email-text {
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#subscribe-submit {
+    margin-top: 2%;
+}
+
+/* MQ - GAMEBOARD */
+
+.game-board {
+    grid-gap: 1.5%;
+    margin: 25% 0 25% 0;
+    padding: 2%;
+}
+
+.time-turns {
+  padding: 1%;
+}
+
+/* MQ - ABOUT SECTION */
+
+#about {
+    padding-top: 15%;
+}
+
+/* MQ - FOOTER */
+
+footer {
+    max-width: 100%;
+    max-height: 50px;
+}
+
+.social-links {
+  margin: 0;
+  padding:0;
+}
+
+}

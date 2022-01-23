@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="Kate Walsh" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="HTML,CSS,JavaScript,Code Institute,Milestone2" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.0/sandstone/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+	<link rel="stylesheet" href="assets/css/style.min.css" />
+	<link rel="icon" href="assets/images/favicon.png" sizes="16x16" type="image/png">
+	<title>Match It</title>
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-expand navbar-bg fixed-top">
+			<div id="desktop-nav" class="desktop-nav">
+				<ul class="navbar-nav mr-auto">
+					<li id="logo">Match It</li>
+					<li class="nav-item mr-2">
+						<a class="nav-link" href="index.html">
+							<p>Play</p>
+						</a>
+					</li>
+					<li class="nav-item mr-2">
+						<a class="nav-link" href="#about">
+							<p>About</p>
+						</a>
+					</li>
+					<li class="nav-item mr-2">
+						<a class="nav-link" href="#subscribe">
+							<p>Subscribe</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- The user will see the mobile-nav navbar when they're viewing the website on a mobile device. 
+        Menu options are represented with icons to save space and keep the UI simple -->
+			<div id="mobile-nav" class="mobile-nav">
+				<ul class="navbar-nav mr-auto">
+					<li id="logo-mobile">Match It</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.html"><i class="fas fa-gamepad" aria-hidden="true"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#about"><i class="fas fa-info" aria-hidden="true"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#subscribe"><i class="fas fa-edit" aria-hidden="true"></i></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<div id="playerPanel" class="d-none">
+		Match It
+		<form id="playerForm">
+			<label for="playerName">
+            <span class="enter-name">Enter player name:</span></label>
+			<input type="text" id="playerName" name="playerName" required />
+			<input type="submit" id="submit" value="Play!" />
+      </form>
+			<div id="currentScorePanel">Score: <span id="current-score">0</span>
+			</div>
+			<div id="scores"></div>
+	</div>
+	<div id="gameboard-container">
+		<div id="main-gameboard" class="game-board d-none">
+			<div class="game-info">
+				<div class="time-turns">Time <span id="time-left"></span></div>
+				<div class="time-turns">Turns <span id="turns">0</span></div>
+			</div>
+
+			<!-- HTML for cards will be inserted here with insertAdjacentHTML -->
+		</div>
+	</div>
+	<div id="about">
+		<h1>About Memory Games</h1>
+		<p class="about-text">
+			Memory games exercise the brain’s memory function. When memory games are played
+			consistently, it is like exercising the brain to make it more alert and sharp.
+			You can do this by playing memory games for 30 minutes to one hour every day. The key is to remember to play
+			them consistently. Some benefits of memory games include exercising the brain, preventing memory-related
+			illnesses and enhancing
+			other brain functions.
+		</p>
+	</div>
+	<div id="subscribe">
+		<h1>Subscribe</h1>
+		<span id="email-text">Subscribe to our newsletter to be the first to hear about new game releases!</span>
+		<form id="email-subscribe">
+			<label for="email">
+            <span class="enter-email">Enter email address:</span></label>
+			<input type="email" id="email" name="email" required />
+			<input type="button" id="subscribe-submit" value="Subscribe!" />
+      </form>
+	</div>
+	<footer>
+		<ul class="social-links">
+			<li>
+				<a href="https://www.instagram.com" target="_blank">
+					<i class="fab fa-instagram" aria-hidden="true"></i></a>
+			</li>
+			<li>
+				<a href="https://www.facebook.com" target="_blank">
+					<i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+			</li>
+			<li>
+				<a href="https://www.reddit.com" target="_blank">
+					<i class="fab fa-reddit-square" aria-hidden="true"></i></a>
+			</li>
+		</ul>
+	</footer>
+	<script src="assets/js/main.min.js"></script>
+</body>
+</html>
