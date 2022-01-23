@@ -3,7 +3,7 @@
    */
 
  const cardDeck = [
-    "Puppy1.jpg",
+    "puppy1.jpg",
     "puppy2.jpg",
     "puppy3.jpg",
     "puppy4.jpg",

@@ -10,8 +10,8 @@
 .navbar {
   font-family: 'Bungee Inline';
   font-size: 300%;
-  color: yellow;
-  background-color: black;
+  color: white;
+  background-color: #333333;
   display: block;
   width: 100%;
 }
@@ -36,7 +36,7 @@
 #logo-mobile {
   font-family: 'Bungee Inline';
   font-size: 60%;
-  color: yellow;
+  color: white;
 }
 
 .mobile-nav i {
@@ -51,7 +51,7 @@
 /*-------- Global ---------*/
 
 body {
-  background-color: black;
+  background-color: #333333;
   margin: 0;
 }
 
@@ -64,10 +64,10 @@ body {
   text-align: center;
   justify-content: center;
   z-index: 1100; /* This specifies the stack order to ensure #playerPanel is displayed in front of the rest of the elements on screen */
-  background-color: black;
+  background-color: #333333;
   font-family: 'Bungee Inline';
   font-size:350%;
-  color: yellow;
+  color: white
 }
 
 #currentScorePanel {
@@ -265,32 +265,32 @@ h1 {
 
 /*-------------- Footer -------------*/
 
-footer {
-  height: 70px;
-  width: 100%;
-  margin: 0;
-  padding: 1%;
-  background-color: black;
-  position: fixed;
-  align-content: center;
-  bottom: 0;
-  left: 0;
-}
 
-.social-links {
-  text-align: center;
-}
-
-.social-links li {
-  display: inline;
-}
-
-.social-links i {
-  font-size: 180%;
-  margin: 0;
-  padding: 0.5%;
-  color: white;
-}
+footer { 
+        position:fixed;
+        left:0px;
+        bottom:0px;
+        height:100px;
+        width:100%;
+        background-color: rgb(212, 171, 117);          
+    }
+          
+    .footer-links {
+        text-align: center;
+        }
+          
+    .footer-links > li {
+        display: inline;
+        }
+          
+        
+    i {
+        font-size: 160%;
+        margin: 1%;
+        padding: 5%;
+        color: #3a3a3a;
+        margin-top: 10%;
+    }
 
 /*--------------- Media Queries --------------*/
 
