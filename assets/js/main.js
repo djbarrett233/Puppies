@@ -3,14 +3,14 @@
    */
 
  const cardDeck = [
-    "castle.jpg",
-    "cat.jpg",
-    "dragon.jpg",
-    "frog.jpg",
-    "gingerbread.jpg",
-    "owl.jpg",
-    "rabbit.jpg",
-    "rainbow.jpg",
+    "Puppy1.jpg",
+    "puppy2.jpg",
+    "puppy3.jpg",
+    "puppy4.jpg",
+    "puppy5.jpg",
+    "puppy6.jpg",
+    "puppy7.jpg",
+    "puppy8.jpg",
 ];
 
 const gameId = 'board-game';
@@ -146,7 +146,7 @@ class BoardGame {
         //Starts the game
         this.startGame();
     }
-
+    
     popSound() {
         let audio = new Audio("assets/audio/pop.mp3");
         audio.play();
@@ -382,6 +382,4 @@ class BoardGame {
 }
 
 const game = new BoardGame(gameTime);
-game.start();
-© 2022 GitHub, Inc.
-Terms
+
